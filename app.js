@@ -62,34 +62,30 @@ app.use("/", indexRouter);
 // cần passport để vào các api
 app.use(
   "/products",
-  passport.authenticate("jwt", { session: false }),
   productRouter
 );
 app.use(
   "/categories",
-  passport.authenticate("jwt", { session: false }),
   categoryRouter
 );
 app.use(
   "/suppliers",
-  passport.authenticate("jwt", { session: false }),
   supplierRouter
 );
 app.use(
   "/customers",
-  passport.authenticate("jwt", { session: false }),
   customerRouter
 );
 app.use(
   "/employees",
-  passport.authenticate("jwt", { session: false }),
+  
   employeeRouter
 );
-app.use(
-  "/orders",
-  passport.authenticate("jwt", { session: false }),
-  orderRouter
-);
+// app.use(
+//   "/orders",
+//   passport.authenticate("jwt", { session: false }),
+//   orderRouter
+// );
 
 app.use("/cart", cartRouter);
 app.use("/questions", questionsRouter);
