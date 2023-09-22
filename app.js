@@ -22,11 +22,11 @@ const cartRouter = require("./routes/cart/router");
 const authRouter = require("./routes/auth/router");
 
 const mediaRouter = require("./routes/upload");
-const {
-  passportVerifyToken,
-  passportVerifyAccount,
-  passportConfigBasic,
-} = require("./middlewares/passport");
+// const {
+//   passportVerifyToken,
+//   passportVerifyAccount,
+//   passportConfigBasic,
+// } = require("./middlewares/passport");
 // view engine setup
 
 const app = express();
@@ -54,9 +54,9 @@ app.use(
   mediaRouter
 );
 
-passport.use(passportVerifyAccount);
-passport.use(passportVerifyToken);
-passport.use(passportConfigBasic);
+// passport.use(passportVerifyAccount);
+// passport.use(passportVerifyToken);
+// passport.use(passportConfigBasic);
 
 app.use("/", indexRouter);
 // cần passport để vào các api
